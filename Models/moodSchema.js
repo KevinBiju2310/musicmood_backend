@@ -32,6 +32,19 @@ const moodSchema = new mongoose.Schema({
       type: String,
       required: true,
     },
+    shape: {
+      type: String,
+      enum: [
+        "circle",
+        "square",
+        "triangle",
+        "tear",
+        "diamond",
+        "hexagon",
+        "cloud",
+      ],
+      required: true,
+    },
   },
 });
 

@@ -29,19 +29,19 @@ const getDateRange = async (req, res) => {
         .json({ message: "Start and end dates are required" });
     }
     const startDate = new Date(start);
+    startDate.setHours(0, 0, 0, 0);
     const endDate = new Date(end);
-    console.log(startDate, endDate);
+    endDate.setHours(23, 59, 59, 999);
     if (isNaN(startDate.getTime()) || isNaN(endDate.getTime())) {
       return res.status(400).json({ message: "Invalid date format" });
     }
     const moods = await Mood.find({
       userId: userId,
-      createdAt: {
+      date: {
         $gte: startDate,
         $lte: endDate,
       },
-    }).sort({ createdAt: 1 });
-    // console.log(moods, "moods");
+    }).sort({ date: 1 });
     res.status(200).json({ message: "Moods fetched with given dates", moods });
   } catch (error) {
     console.error("Error occured", error);
