@@ -9,9 +9,7 @@ It manages user authentication, mood recording, and serves the data needed for g
 - **Node.js** (runtime)
 - **Express.js** (server framework)
 - **MongoDB** (database)
-- **Mongoose** (MongoDB object modeling)
-- **dotenv** (environment variable management)
-- **CORS** (Cross-Origin Resource Sharing)
+- **React.js** (frontend library)
 
 ---
 
