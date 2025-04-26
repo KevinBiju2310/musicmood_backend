@@ -19,9 +19,10 @@ It manages user authentication, mood recording, and serves the data needed for g
 
 ### 📥 1. Clone the Repository
 
-bash
+```bash
 git clone https://github.com/your-username/musicmood-backend.git
 cd musicmood-backend
+```
 
 ### 📦 2. Install Dependencies
 
