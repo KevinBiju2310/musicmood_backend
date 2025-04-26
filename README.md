@@ -22,6 +22,11 @@ git clone https://github.com/your-username/musicmood-backend.git
 cd musicmood-backend
 ```
 
+### 🎥 Demo Video
+
+Check out the walkthrough video here:  
+👉 [Watch on YouTube](https://youtu.be/taqc5El3xg0)
+
 ### 📦 2. Install Dependencies
 
 Make sure you have [Node.js](https://nodejs.org/) installed.  
