@@ -3,6 +3,8 @@
 This is the backend server for **MusicMood**, a mood-tracking and melody-generating application.  
 It manages user authentication, mood recording, and serves the data needed for generating music based on user moods.
 
+Check out the walkthrough video here:  
+👉 [Watch on YouTube](https://youtu.be/taqc5El3xg0)
 ---
 
 ## 🛠️ Tech Stack
@@ -22,10 +24,6 @@ git clone https://github.com/your-username/musicmood-backend.git
 cd musicmood-backend
 ```
 
-### 🎥 Demo Video
-
-Check out the walkthrough video here:  
-👉 [Watch on YouTube](https://youtu.be/taqc5El3xg0)
 
 ### 📦 2. Install Dependencies
 
