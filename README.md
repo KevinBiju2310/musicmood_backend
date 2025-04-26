@@ -42,7 +42,8 @@ PORT=5000
 MONGO_URI=your_mongodb_connection_string
 GOOGLE_CLIENTID=your_google_client_id
 JWT_SECRET=your_jwt_secret_key
-NODE_ENV=development
+GOOGLE_CLIENTSECRET=your_client_secret
+FRONTEND_URL =  "http://localhost:5173"
 ```
 
 > Replace the placeholder values with your actual credentials.
