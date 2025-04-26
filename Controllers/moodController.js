@@ -3,11 +3,12 @@ const Mood = require("../Models/moodSchema");
 const newMood = async (req, res) => {
   try {
     const userId = req.user.id;
-    const { mood } = req.body;
+    const { mood, date } = req.body;
 
     const newMood = new Mood({
       userId: userId,
       mood,
+      date: date ? new Date(date) : new Date(),
     });
     const savedMood = await newMood.save();
     res
@@ -87,9 +88,11 @@ const getTodayMoods = async (req, res) => {
     const userId = req.user.id;
     const today = new Date();
     today.setHours(0, 0, 0, 0);
+    const tomorrow = new Date(today);
+    tomorrow.setDate(tomorrow.getDate() + 1);
     const moods = await Mood.find({
       userId: userId,
-      date: { $gte: today },
+      date: { $gte: today, $lt: tomorrow },
     }).sort({ date: 1 });
     res
       .status(200)
