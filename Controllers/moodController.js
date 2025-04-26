@@ -30,7 +30,7 @@ const getDateRange = async (req, res) => {
         .json({ message: "Start and end dates are required" });
     }
     const startDate = new Date(start);
-    startDate.setHours(0, 0, 0, 0);
+    startDate.setHours(12, 0, 0, 0);
     const endDate = new Date(end);
     endDate.setHours(23, 59, 59, 999);
     if (isNaN(startDate.getTime()) || isNaN(endDate.getTime())) {
