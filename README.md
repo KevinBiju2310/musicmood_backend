@@ -43,7 +43,7 @@ MONGO_URI=your_mongodb_connection_string
 GOOGLE_CLIENTID=your_google_client_id
 JWT_SECRET=your_jwt_secret_key
 GOOGLE_CLIENTSECRET=your_client_secret
-FRONTEND_URL =  "http://localhost:5173"
+FRONTEND_URL=your_frontend_url 
 ```
 
 > Replace the placeholder values with your actual credentials.
