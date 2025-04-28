@@ -103,26 +103,6 @@ const getTodayMoods = async (req, res) => {
   }
 };
 
-const getWeeklyMoods = async (req, res) => {
-  try {
-    const userId = req.user.id;
-    const today = new Date();
-    const startOfWeek = new Date(today);
-    startOfWeek.setDate(today.getDate() - today.getDay());
-    startOfWeek.setHours(0, 0, 0, 0);
-    const moods = await Mood.find({
-      userId: userId,
-      date: { $gte: startOfWeek },
-    }).sort({ date: 1 });
-    res
-      .status(200)
-      .json({ message: "Retrieved Weekly moods successfully", moods });
-  } catch (err) {
-    console.error("Error occured", err);
-    res.status(500).json({ message: "Internal Server Error" });
-  }
-};
-
 const deleteMoods = async (req, res) => {
   try {
     const userId = req.user.id;
@@ -149,6 +129,5 @@ module.exports = {
   getDateRange,
   updateDayMoods,
   getTodayMoods,
-  getWeeklyMoods,
   deleteMoods,
 };

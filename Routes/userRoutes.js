@@ -11,7 +11,6 @@ router.post("/add", authMiddleware, moodController.newMood);
 router.put("/day", authMiddleware, moodController.updateDayMoods);
 
 router.get("/today", authMiddleware, moodController.getTodayMoods);
-router.get("/weekly", authMiddleware, moodController.getWeeklyMoods);
 router.get("/range", authMiddleware, moodController.getDateRange);
 
 router.delete("/delete", authMiddleware, moodController.deleteMoods);
